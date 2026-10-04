@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - MIS-2-RAH RENTAL SERVICE</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+  body { background: #1a1a2e; color: #f0f0f0; }
+  nav { background: #3e2f23; display: flex; justify-content: center; gap: 20px; padding: 12px; position: sticky; top: 0; flex-wrap: wrap; }
+  nav a { color: white; text-decoration: none; font-weight: bold; padding: 5px 10px; border-radius: 5px; }
+  nav a:hover { background: #d9b380; }
+  header { background: #3e2f23; color: white; text-align: center; padding: 40px 20px; }
+  header h1 { font-size: 2rem; }
+  section { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+  .photo { background: #26264a; border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 3px 8px rgba(0,0,0,0.12); border-top: 5px solid #3e2f23; }
+  .photo span { font-size: 3.5rem; }
+  .photo p { margin-top: 10px; font-weight: bold; color: #3e2f23; }
+  .note { text-align: center; margin-top: 25px; background: #fff3cd; padding: 15px; border-radius: 10px; }
+
+  /* Lightbox - click to zoom */
+  .lightbox { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
+  .lightbox img { max-width: 90%; max-height: 85%; border-radius: 10px; }
+  .lightbox span { position: absolute; top: 20px; right: 35px; color: white; font-size: 2.5rem; cursor: pointer; }
+  img { cursor: pointer; }
+  footer { background: #3e2f23; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="index.html#items">Items</a>
+  <a href="services.html">Services</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <a href="gallery.html">Gallery</a><a href="complaint.html">Complaint</a>
+</nav>
+
+<header>
+  <h1>Gallery</h1>
+  <p>Photos from our past events</p>
+</header>
+
+<section>
+  <div class="grid">
+    <div class="photo"><img src="images/chair_nobg.png" alt="Chairs Setup" style="width:150px;height:110px;object-fit:cover;border-radius:8px;"><p>Chairs Setup</p></div>
+    <div class="photo"><img src="images/canopy.jpg" alt="Canopy Installation" style="width:150px;height:110px;object-fit:cover;border-radius:8px;"><p>Canopy Installation</p></div>
+    <div class="photo"><img src="images/decor.jpg" alt="Decoration Cloths" style="width:150px;height:110px;object-fit:cover;border-radius:8px;"><p>Decoration Cloths</p></div>
+    <div class="photo"><img src="images/fan.jpg" alt="Fans Arrangement" style="width:150px;height:110px;object-fit:cover;border-radius:8px;"><p>Fans Arrangement</p></div>
+    <div class="photo"><img src="images/table_nobg.png" alt="Table Setup" style="width:150px;height:110px;object-fit:cover;border-radius:8px;"><p>Table Setup</p></div>
+  </div>
+  <div class="note">📝 <b>Tip:</b> Replace these icons with your real event photos to attract more customers!</div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+  <span>&times;</span>
+  <img id="lightbox-img" src="">
+</div>
+
+<script>
+  document.querySelectorAll('img').forEach(function(img) {
+    img.onclick = function() {
+      document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById('lightbox-img').src = this.src;
+    };
+  });
+</script>
+
+<footer>
+  <p>© 2026 MIS-2-RAH RENTAL SERVICE | 📞 09124545110</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
