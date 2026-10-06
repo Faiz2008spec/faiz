@@ -102,6 +102,17 @@ body.light .note { background: #fff3cd; color: #333; }</style>
     <button type="submit">Send Booking</button>
   </form>
   <p id="msg" style="display:none; color:#7ad67a; font-size:1.2rem; text-align:center; margin-top:15px; font-weight:bold;">✅ Thank you for choosing us! Your message has been sent. We will contact you soon.</p>
+
+  <br>
+  <button type="button" onclick="document.getElementById('payment').style.display = document.getElementById('payment').style.display === 'none' ? 'block' : 'none';">💳 Click Here to Make Payment</button>
+
+  <div id="payment" style="display:none; background:#26264a; border-radius:12px; padding:25px; margin-top:15px; text-align:center; box-shadow:0 3px 8px rgba(0,0,0,0.3);">
+    <h3 style="color:#f0d9a8; margin-bottom:12px;">Payment Details</h3>
+    <p>🏦 <b>Bank:</b> Moniepoint</p>
+    <p>👤 <b>Account Name:</b> Faiz Fazazi Afolabi</p>
+    <p>🔢 <b>Account Number:</b> 9124545110</p>
+    <p style="margin-top:10px;">After payment, send your receipt via WhatsApp to confirm your booking.</p>
+  </div>
 </section>
 
 <section id="contact">
