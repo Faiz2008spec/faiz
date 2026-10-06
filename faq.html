@@ -16,7 +16,10 @@
   .faq { background: #26264a; border-radius: 10px; padding: 20px; margin-bottom: 15px; box-shadow: 0 3px 8px rgba(0,0,0,0.12); border-left: 5px solid #f4a259; }
   .faq h3 { color: #f0d9a8; margin-bottom: 8px; }
   footer { background: #0f4c5c; color: white; text-align: center; padding: 20px; margin-top: 40px; }
-</style>
+/* Light mode */
+body.light { background: #faf7f0; color: #1a1a2e; }
+body.light .item, body.light .strength, body.light .service, body.light .faq, body.light .photo, body.light form, body.light .info { background: #ffffff; color: #333; }
+body.light .note { background: #fff3cd; color: #333; }</style>
 </head>
 <body>
 
@@ -26,6 +29,7 @@
   <a href="faq.html">FAQ</a>
   <a href="contact.html">Contact</a>
   <a href="gallery.html">Gallery</a><a href="complaint.html">Complaint</a>
+  <a href='#' onclick='toggleTheme();return false;'>??</a>
 </nav>
 
 <header>
@@ -46,8 +50,15 @@
   <p>© 2026 MIS-2-RAH RENTAL SERVICE | 📞 09124545110</p>
 </footer>
 
-</body>
+<script>
+function toggleTheme(){
+  document.body.classList.toggle('light');
+  localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+}
+if (localStorage.getItem('theme') === 'light') { document.body.classList.add('light'); }
+</script></body>
 </html>
+
 
 
 
