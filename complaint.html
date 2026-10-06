@@ -42,12 +42,13 @@ body.light .note { background: #fff3cd; color: #333; }</style>
 </header>
 
 <section>
-  <form onsubmit="window.location.href='mailto:faizfazazi47@gmail.com?subject=Complaint from ' + encodeURIComponent(this.name.value) + '&body=' + encodeURIComponent('Name: ' + this.name.value + '\nPhone: ' + this.phone.value + '\nComplaint: ' + this.complaint.value); return false;">
+  <form onsubmit="window.location.href='mailto:faizfazazi47@gmail.com?subject=Complaint from ' + encodeURIComponent(this.name.value) + '&body=' + encodeURIComponent('Name: ' + this.name.value + '\nPhone: ' + this.phone.value + '\nComplaint: ' + this.complaint.value); document.getElementById('msg').style.display='block'; return false;">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="tel" name="phone" placeholder="Phone Number" required>
     <textarea name="complaint" rows="5" placeholder="Describe your complaint..." required></textarea>
     <button type="submit">Send Complaint via Email</button>
   </form>
+  <p id="msg" style="display:none; color:#7ad67a; font-size:1.2rem; text-align:center; margin-top:15px; font-weight:bold;">✅ Thank you for choosing us! Your message has been sent. We will contact you soon.</p>
 </section>
 
 <footer>
